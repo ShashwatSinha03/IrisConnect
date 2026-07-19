@@ -12,7 +12,8 @@ export default async function TeacherDashboardPage() {
 
   return (
     <div className="mx-auto max-w-5xl animate-fadeUp space-y-12">
-      <div>
+      <div className="relative">
+        <div className="absolute -left-4 top-0 h-full w-0.5 rounded-full bg-gradient-to-b from-gold-500/60 to-transparent" />
         <h1 className="text-xl font-semibold tracking-tight text-white">Dashboard</h1>
         <p className="mt-0.5 text-sm text-[#9498ab]">
           {dashboard.teacher.className} {dashboard.teacher.section} &middot; {dashboard.teacher.subject}

@@ -136,12 +136,15 @@ export function RoleShell({
                   href={item.href}
                   onClick={() => setOpen(false)}
                   className={cn(
-                    "flex items-center gap-3 rounded-lg px-3 py-2 text-sm font-medium transition-all duration-150",
+                    "relative flex items-center gap-3 rounded-lg px-3 py-2 text-sm font-medium transition-all duration-150",
                     active
                       ? cn(meta.bgActive, meta.textActive)
                       : cn(meta.textInactive, meta.hoverBg, meta.hoverText)
                   )}
                 >
+                  {active ? (
+                    <div className="absolute left-0 top-1/2 h-5 w-0.5 -translate-y-1/2 rounded-full bg-gold-500/60" />
+                  ) : null}
                   <ItemIcon className={cn("h-4 w-4", active ? meta.iconColor : "text-[#4a4f69]")} />
                   <span>{item.label}</span>
                 </Link>
@@ -201,10 +204,11 @@ export function RoleShell({
           </header>
 
           <main className="flex-1 px-4 py-6 sm:px-6 lg:px-8">{children}</main>
-          <footer className="border-t border-[#1a1d2b] px-4 py-4 sm:px-6 lg:px-8">
-            <p className="text-center text-xs text-[#5c6070]">
+          <footer className="flex justify-center border-t border-[#1a1d2b] px-4 py-5 sm:px-6 lg:px-8">
+            <div className="inline-flex items-center gap-2 rounded-full border border-gold-500/25 bg-gold-500/[0.06] px-4 py-1.5 text-xs text-gold-400/90 backdrop-blur-md">
+              <span className="h-1.5 w-1.5 rounded-full bg-gold-500/70" />
               designed with love by shantam sinha
-            </p>
+            </div>
           </footer>
         </div>
       </div>

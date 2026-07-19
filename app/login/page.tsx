@@ -8,6 +8,12 @@ export default function LoginPage() {
         <img src="/icon.png" alt="Iris Connect" className="h-11 w-11" />
         <span className="text-lg font-semibold tracking-tight text-white" style={{ fontFamily: "'Times New Roman', serif" }}>IRIS CROWN SCHOOL</span>
       </div>
+      <div className="absolute bottom-6 left-0 right-0 z-10 flex justify-center">
+        <div className="inline-flex items-center gap-2 rounded-full border border-gold-500/25 bg-gold-500/[0.06] px-4 py-1.5 text-xs text-gold-400/90 backdrop-blur-md">
+          <span className="h-1.5 w-1.5 rounded-full bg-gold-500/70" />
+          designed with love by shantam sinha
+        </div>
+      </div>
       <div className="grid min-h-screen lg:grid-cols-[3fr_auto_2fr]">
         {/* Left side — hero / statements */}
         <section className="relative flex items-center bg-surface-dark px-6 py-16 sm:px-10 lg:px-14 xl:px-20">
