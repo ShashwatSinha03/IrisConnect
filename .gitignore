@@ -1,0 +1,7 @@
+node_modules/
+.next/
+*.tsbuildinfo
+.playwright-mcp/
+login-debug.png
+login-video.png
+components/ui/video-text.tsx
